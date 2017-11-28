@@ -3,8 +3,21 @@
 var todoList = {
     todos: [],
     displayTodos: function(){
-        // this keyword refers to itslef on the object
-        console.log('My todos:', this.todos);
+        if(this.todos.length === 0){
+            console.log('Your todo list is empty!')
+        }
+        else {
+        console.log('My todos:');
+        for (var i = 0; i < this.todos.length; i++){
+          if(this.todos[i].completed === true){
+            console.log('(x)',this.todos[i].todoText);
+        }
+        else
+        {
+          console.log('()',this.todos[i].todoText);
+         }
+        }
+      }
     },
     addTodo: function(todoText){
         this.todos.push({ // passing objects
@@ -29,8 +42,13 @@ var todoList = {
     }
 };
 
-todoList.addTodo('boolean testing')
+
+todoList.addTodo('first')
+todoList.addTodo('second')
+
 todoList.toggleCompleted(0)
+todoList.displayTodos()
+
 
 
 

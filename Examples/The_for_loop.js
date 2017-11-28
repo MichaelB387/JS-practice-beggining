@@ -7,6 +7,9 @@
 // 2 "hey"
 // 3 stop
 
+// ****** Important instead of i < 3 use i var.length and this will run for 
+// length of the array.
+
 for (var i = 0; i < 3; i++) {
     console.log("hey");
 }

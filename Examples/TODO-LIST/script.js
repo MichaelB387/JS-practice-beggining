@@ -48,6 +48,8 @@ todoList.addTodo('second')
 
 todoList.toggleCompleted(0)
 todoList.displayTodos()
+todoList.displayTodos()
+
 
 
 
